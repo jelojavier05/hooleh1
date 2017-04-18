@@ -60,7 +60,7 @@ class EnforcerController extends Controller
             $enforcer->strEnforcerLastname = $request->strEnforcerLastname;
             $enforcer->strEnforcerPicture = $request->strEnforcerPicture;
             $enforcer->strEnforcerPosition = $request->strEnforcerPosition;
-            $enforcer->intUserID = $user->id;;
+            $enforcer->intUserID = $user->id;
             $enforcer->save();
             DB::commit();
             return response()->json([
@@ -133,8 +133,6 @@ class EnforcerController extends Controller
             $enforcer->strEnforcerLastname = $request->strEnforcerLastname;
             $enforcer->strEnforcerPicture = $request->strEnforcerPicture;
             $enforcer->strEnforcerPosition = $request->strEnforcerPosition;
-            $enforcer->strEnforcerUsername = $request->strEnforcerUsername;
-            $enforcer->strEnforcerPassword = Hash::make($request->strEnforcerPassword);
 
             $enforcer->save();
 

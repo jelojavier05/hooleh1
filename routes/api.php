@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('authenticate', 'Auth\AuthController@authenticate');
 
 Route::group(['middleware' => ['jwt.auth', 'cors'], 'prefix' => 'v1', 'namespace' => 'api\v1'], function () {
-
+	Route::resource('enforcers', 'EnforcerController');
 });
 
